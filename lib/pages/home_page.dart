@@ -44,7 +44,7 @@ class HomePage extends StatelessWidget {
       ),
       appBar: AppBar(
         title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
           children: [
             Icon(
               Icons.rocket,
@@ -81,6 +81,23 @@ class HomePage extends StatelessWidget {
             Text(
               "Country",
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
+            ),
+            SizedBox(height: 16),
+            Container(
+              height: 220,
+              width: 160,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(22.0),
+                image: DecorationImage(
+                  colorFilter: ColorFilter.mode(
+                    Colors.black.withOpacity(0.40),
+                    BlendMode.srcATop,
+                  ),
+                  fit: BoxFit.cover,
+                  image: NetworkImage(
+                      "https://images.pexels.com/photos/3538245/pexels-photo-3538245.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"),
+                ),
+              ),
             ),
           ],
         ),
