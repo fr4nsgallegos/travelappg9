@@ -4,6 +4,7 @@ class CardLugarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.only(right: 8),
       padding: EdgeInsets.all(14),
       height: 220,
       width: 160,

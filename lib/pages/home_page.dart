@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travelappg9/widgets/card2_item_widget.dart';
 import 'package:travelappg9/widgets/card_lugar_widget.dart';
 
 class HomePage extends StatelessWidget {
@@ -85,12 +86,22 @@ class HomePage extends StatelessWidget {
             ),
             SizedBox(height: 16),
             SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
                   CardLugarWidget(),
+                  CardLugarWidget(),
+                  CardLugarWidget(),
+                  CardLugarWidget(),
+                  CardLugarWidget(),
+                  CardLugarWidget(),
                 ],
               ),
-            )
+            ),
+            SizedBox(
+              height: 16,
+            ),
+            Card2ItemWidget(),
           ],
         ),
       ),
