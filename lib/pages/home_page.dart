@@ -63,46 +63,51 @@ class HomePage extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: Padding(
-        padding: EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              "Find the best Tour",
-              style: TextStyle(fontWeight: FontWeight.w500, fontSize: 24),
-            ),
-            SizedBox(
-              height: 8,
-            ),
-            Text(
-                "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor"),
-            SizedBox(
-              height: 8,
-            ),
-            Text(
-              "Country",
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
-            ),
-            SizedBox(height: 16),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: [
-                  CardLugarWidget(),
-                  CardLugarWidget(),
-                  CardLugarWidget(),
-                  CardLugarWidget(),
-                  CardLugarWidget(),
-                  CardLugarWidget(),
-                ],
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.all(16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "Find the best Tour",
+                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 24),
               ),
-            ),
-            SizedBox(
-              height: 16,
-            ),
-            Card2ItemWidget(),
-          ],
+              SizedBox(
+                height: 8,
+              ),
+              Text(
+                  "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor"),
+              SizedBox(
+                height: 8,
+              ),
+              Text(
+                "Country",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
+              ),
+              SizedBox(height: 16),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    CardLugarWidget(),
+                    CardLugarWidget(),
+                    CardLugarWidget(),
+                    CardLugarWidget(),
+                    CardLugarWidget(),
+                    CardLugarWidget(),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 16,
+              ),
+              Card2ItemWidget(),
+              Card2ItemWidget(),
+              Card2ItemWidget(),
+              Card2ItemWidget(),
+            ],
+          ),
         ),
       ),
     );

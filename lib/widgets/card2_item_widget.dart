@@ -5,6 +5,7 @@ class Card2ItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.only(bottom: 16),
       decoration: BoxDecoration(
         color: Color(0xffDBFEF9),
         borderRadius: BorderRadius.circular(20),
