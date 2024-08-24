@@ -84,19 +84,71 @@ class HomePage extends StatelessWidget {
             ),
             SizedBox(height: 16),
             Container(
+              padding: EdgeInsets.all(14),
               height: 220,
               width: 160,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(22.0),
                 image: DecorationImage(
                   colorFilter: ColorFilter.mode(
-                    Colors.black.withOpacity(0.40),
+                    Colors.black.withOpacity(0.35),
                     BlendMode.srcATop,
                   ),
                   fit: BoxFit.cover,
                   image: NetworkImage(
                       "https://images.pexels.com/photos/3538245/pexels-photo-3538245.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"),
                 ),
+              ),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Container(
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                        decoration: BoxDecoration(
+                          color: Colors.white.withOpacity(0.35),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        child: Text(
+                          "NEW",
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                      Stack(
+                        clipBehavior: Clip.none,
+                        children: [
+                          Positioned(
+                            left: 40,
+                            child: CircleAvatar(
+                              radius: 16,
+                              backgroundImage: NetworkImage(
+                                  "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=600"),
+                            ),
+                          ),
+                          Positioned(
+                            left: 20,
+                            child: CircleAvatar(
+                              radius: 16,
+                              backgroundImage: NetworkImage(
+                                  "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"),
+                            ),
+                          ),
+                          Positioned(
+                            child: CircleAvatar(
+                              radius: 16,
+                              backgroundImage: NetworkImage(
+                                  "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=600"),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  Row(),
+                ],
               ),
             ),
           ],
