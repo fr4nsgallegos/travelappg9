@@ -1,11 +1,43 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:travelappg9/widgets/card2_item_widget.dart';
 import 'package:travelappg9/widgets/card_lugar_widget.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  int contador = 0;
+
+  Future<void> _saveContador() async {
+    SharedPreferences _prefs = await SharedPreferences.getInstance();
+    _prefs.setInt("counter", contador);
+  }
+
+  Future<void> _getContador() async {
+    SharedPreferences _prefs = await SharedPreferences.getInstance();
+    print(_prefs.getInt("counter"));
+    contador = _prefs.getInt("counter") ?? 0;
+    setState(() {});
+  }
+
+  @override
+  void initState() {
+    _getContador();
+    // TODO: implement initState
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(onPressed: () {
+        contador++;
+        _saveContador();
+        setState(() {});
+      }),
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
@@ -69,6 +101,12 @@ class HomePage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              Center(
+                child: Text(
+                  contador.toString(),
+                  style: TextStyle(fontSize: 35),
+                ),
+              ),
               Text(
                 "Find the best Tour",
                 style: TextStyle(fontWeight: FontWeight.w500, fontSize: 24),
