@@ -111,7 +111,7 @@ class Card3ItemWidget extends StatelessWidget {
                             fontSize: 12,
                             fontWeight: FontWeight.w400,
                           ),
-                        )
+                        ),
                       ],
                     ),
                   ],
