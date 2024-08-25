@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class WelcomeWidget extends StatelessWidget {
   String title;
@@ -34,6 +35,7 @@ class WelcomeWidget extends StatelessWidget {
           ),
           Text(
             title,
+            textAlign: TextAlign.center,
             style: TextStyle(
               color: Colors.white,
               fontSize: 30,
