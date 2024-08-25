@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:travelappg9/widgets/card2_item_widget.dart';
+import 'package:travelappg9/widgets/card3_item_widget.dart';
 import 'package:travelappg9/widgets/card_lugar_widget.dart';
 
 class HomePage extends StatefulWidget {
@@ -144,6 +145,17 @@ class _HomePageState extends State<HomePage> {
               Card2ItemWidget(),
               Card2ItemWidget(),
               Card2ItemWidget(),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Card3ItemWidget(),
+                    Card3ItemWidget(),
+                    Card3ItemWidget(),
+                    Card3ItemWidget(),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
