@@ -15,6 +15,7 @@ class WelcomePage extends StatelessWidget {
             description:
                 "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor",
             pathAsset: "avion",
+            showButton: false,
           ),
           WelcomeWidget(
             title: "Agenda tus viajes",
@@ -22,6 +23,7 @@ class WelcomePage extends StatelessWidget {
             description:
                 "Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira",
             pathAsset: "agregar",
+            showButton: false,
           ),
           WelcomeWidget(
             title: "Imprimte tus tickets",
@@ -29,11 +31,13 @@ class WelcomePage extends StatelessWidget {
                 "El trozo de texto estándar de Lorem Ipsum usado desde el año 1500 es reproducido debajo para aquellos interesados. ",
             color: Colors.red,
             pathAsset: "print",
+            showButton: true,
           ),
         ],
         options: CarouselOptions(
           height: MediaQuery.of(context).size.height,
           autoPlay: true,
+          reverse: false,
           enableInfiniteScroll: false,
           autoPlayCurve: Curves.linear,
           enlargeCenterPage: true,
